@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Reglas</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Paytone+One&display=swap'><link rel="stylesheet" href="static/css/reglas.css">
+
+</head>
+<body>
+  <div class="area" >
+        <div class="Titulo">
+            <h2>Wordle</h2>
+            <h3>Reglas</h3>
+        </div>
+    
+        <div class="Boton">
+          <input class="boton" type="button" value="INICIO" name="inicio" id="inicio" onclick="location.href= 'https://G06-TPI-1cuatr.agustina-belen2.repl.co'
+            ">
+        </div>
+        <div class="Reglamento">
+            <ul class="reglas">
+                <li >Adivina la palabra oculta en seis intentos</li>
+                <li>Cada intento debe ser una palabra válida de 5 letras</li>
+                <li>Puede haber letras repetidas y en ese caso las pistas son independientes para cada letra y tienen prioridad</li>
+                <li>Después de cada intento el color de las letras cambia para mostrar qué tan cerca estás de acertar la palabra:</li>
+            </ul>
+        </div>
+
+
+        <div class="imagenes">
+            <div class="Verde">
+                <img src="static/img/verde.png">
+                <p>La letra <b>A</b> está en la palabra y en la posición correcta</p>
+            
+            </div>
+
+            <div class="Amarillo">
+                <img src="static/img/amarillo.png">
+                <p>La letra <b>R</b> está en la palabra pero en la posición incorrecta</p>
+            
+            </div>
+
+            <div class="Gris">
+                <img src="static/img/gris.png">
+                <p>La letra <b>P</b> no está en la palabra</p>
+            
+            </div>
+        </div>
+        <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+        </ul>
+    </div >
+
+</body>
+</html>
