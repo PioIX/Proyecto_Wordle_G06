@@ -245,3 +245,18 @@ const flipTile = () => {
     }, 500 * index);
   });
 };
+
+function mandarAjax() {
+   $.ajax({
+   type: "POST",
+   url: "/traerLista",
+   data: JSON.stringify(null),
+   contentType: "application/json",
+   dataType: 'json',
+   success: function(result) {
+     lista = result; 
+     console.log(lista)
+     
+   } 
+ }); 
+}
