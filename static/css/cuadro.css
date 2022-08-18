@@ -31,7 +31,7 @@
     width: 100%;
     height:100vh;
     z-index: 0;
-  position: absolute;
+    position: absolute;
 }
 
 .circles{
@@ -211,7 +211,6 @@ body {
 }
 
 .key-container button:nth-child(11){
-   
   height: 50px;
   width: 100px;
   z-index: 1;

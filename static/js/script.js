@@ -13,7 +13,7 @@ const birds = [
   'Total',
   'Leyes',
   'Talar',
-  'Crear', 
+  'Poder', 
   'Suelo',
   'Joven',
   'Metas', 
