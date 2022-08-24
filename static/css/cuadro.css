@@ -160,7 +160,6 @@ body {
   width: 800px;
   margin-top: 20px;
   z-index: 1;
-  
 }
 
 .title-container h1 {
@@ -318,4 +317,19 @@ body {
   justify-content: center;
   margin-left: 5%;
   z-index: 1;
+}
+
+#ventana_titulo {
+  color: #2EAD2B;
+  font-size: 40px
+}
+
+#frase {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+}
+
+#ventana_subtitulo {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
 }

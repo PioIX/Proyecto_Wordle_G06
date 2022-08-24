@@ -18,16 +18,19 @@ def reglas():
 @app.route('/cuadro', methods=['POST', 'GET'])
 def cuadro():
 
-    name = request.form['nombre']
-    conn = sqlite3.connect('Wordle_BD.db')
-
-    q = f"""INSERT INTO Jugadores (nombre) 
-    VALUES ('{name}')"""
-
-    conn.execute(q)
-    conn.commit()
-
-    return render_template('cuadro.html')
+    if request.method == 'POST':
+      name = request.form['nombre']
+      conn = sqlite3.connect('Wordle_BD.db')
+  
+      q = f"""INSERT INTO Jugadores (nombre) 
+      VALUES ('{name}')"""
+  
+      conn.execute(q)
+      conn.commit()
+  
+      return render_template('cuadro.html')
+    else:
+      return render_template('cuadro.html')
 
 
 @app.route('/proyecto')
@@ -49,12 +52,4 @@ def traerLista():
   print(results)
   return jsonify(results)
 
-
-@app.route('/adivina')
-def adivina():
-  return render_template('adivina.html')
-  
-@app.route('/noAdivina')
-def noAdivina():
-  return render_template('noAdivina.html')
 app.run(host='0.0.0.0', port=81)

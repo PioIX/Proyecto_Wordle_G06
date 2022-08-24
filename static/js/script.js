@@ -174,8 +174,6 @@ const deleteLetter = (letter) => {
   }
 };
   
-
-  
 const checkRow = () => {
   const guess = guessRows[currentRow].join('');
 
@@ -187,7 +185,7 @@ const checkRow = () => {
       const frase = palabraRandom.lista[0][2];
     console.log(frase);
     document.getElementById('frase').innerHTML = frase;
-      document.getElementById('ventana_titulo').innerHTML = 'Adivinaste!!!';
+      document.getElementById('ventana_titulo').innerHTML = '¡Felicidades!, adivinaste la palabra...';
       
      document.getElementById("ventana").style.display = "block";
       
@@ -198,8 +196,8 @@ const checkRow = () => {
       //si estas en tu ultimo intetno y fallas, perdes
       if (currentRow >= 5) {
         isGameOver = true;
-       document.getElementById('ventana_titulo').innerHTML = 'MAL AHÍ!!!';
-      
+       document.getElementById('ventana_titulo').innerHTML = '¡Mala Suerte!, no adivinaste la palabra...';
+        document.getElementById('ventana_subtitulo').innerHTML = 'Toca inicio y volvelo a intentar';
      document.getElementById("ventana").style.display = "block";
       }
       //si la row actual es menor que 5 incrementa la siguiente linea
@@ -212,7 +210,6 @@ const checkRow = () => {
   }
 };
 
-  
 const showMessage = (message) => {
   const messageElement = document.createElement('p');
   messageElement.textContent = message;

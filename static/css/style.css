@@ -31,6 +31,7 @@
     width: 100%;
     height:100vh;
     z-index: -4;
+ 
 }
 
 .circles{
@@ -153,11 +154,18 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    /*position: absolute;*/
+    top: 10%;
+    /*left: 50%;
+    transform: translate(-50%, -50%);*/
     z-index: 1;
+}
+
+form {
+  width: 60%;
+  align-items: center;
+  text-align: center;
+  z-index: 2;
 }
 
 #botones h1 {
@@ -191,6 +199,8 @@ body {
     height: 50px;
     font-size: 25px;
     justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
     z-index: 1;
 }
 
@@ -202,39 +212,58 @@ body {
     height: 35px;
     font-size: 18px;
     justify-content: center;
+    z-index: 1;
+    margin: auto;
 }
 
 #campos{
     width: 90%;
     height: 50px;
+    margin-top: 20px;
+  margin-bottom: 25px;
     border-radius: 10px;
     border-color: #A6A6A6;
     padding: 20px;
-    margin-top: -25px;
-    margin-bottom: 20px;
     font-family: 'Open Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+    margin-left: auto;
+    /*position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;*/
+}
+
+#intentos {
+   position: fixed;
+   bottom:15px;
+   left: 30px;
 }
 
 #intentos h4{
     display: flex;
     font-family: 'Open Sans', sans-serif;
-    float: left;
     font-size: 160%;
     color: #fff;
-    position:absolute;
-    bottom:10px;
-    right:10px;
+    /*position:absolute;*/
+ 
+    /*right:10px;*/
+}
+
+#tiempo {
+  position: fixed;
+   bottom:15px;
+  right: 30px;
 }
 
 #tiempo h4{
-    display: flex;
+
+  /*display: flex;*/
     font-family: 'Open Sans', sans-serif;
-    float: left;
     font-size: 160%;
     color: #fff;
-    position:absolute;
-    bottom:10px;
-    padding-left: 10px 
 }
 
 #load-container {
@@ -242,10 +271,10 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: absolute;
+  /*position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);*/
 }
 
 #load-container h1 {
@@ -267,7 +296,7 @@ body {
 }
 
 #quienessomos {
-    display: inline-block;
+    display: flex;
     height: 80px;
     width: 80px;
     margin: 30px;
@@ -277,18 +306,19 @@ body {
     text-align: center;
     text-decoration: none;
     color: #4EEF4A;
-
     line-height: 80px;
     font-size: 30px;
     font-weight: bold;
     font-style: normal;
     color: #fff;
+    align-items: center;
+    justify-content: center;
 }
 
 #proyecto {
     align-items: right;
     justify-content: right;
     position: absolute;
-    float: right;
+    float: left;
     z-index: 1;
 }
