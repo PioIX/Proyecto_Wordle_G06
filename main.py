@@ -3,7 +3,7 @@ import sqlite3
 import random
 
 app = Flask(__name__)
-
+app.secret_key = 'asfasdfahsdgajsd'
 
 @app.route('/')
 def index():
@@ -21,13 +21,14 @@ def cuadro():
     if request.method == 'POST':
       name = request.form['nombre']
       conn = sqlite3.connect('Wordle_BD.db')
-  
+      
       q = f"""INSERT INTO Jugadores (nombre) 
       VALUES ('{name}')"""
   
       conn.execute(q)
       conn.commit()
-  
+      
+      
       return render_template('cuadro.html')
     else:
       return render_template('cuadro.html')
