@@ -1,27 +1,20 @@
-//lista de palabras con 5 letras
-const birds = [
-  'Ricos',
-  'Minar',
-  'Gases',
-  'Calor',
-  'Grado',
-  'Hielo',
-  'Parar',
-  'Falta',
-  'Ayuda',
-  'Clima',
-  'Total',
-  'Leyes',
-  'Talar',
-  'Crear', 
-  'Suelo',
-  'Joven',
-  'Metas', 
-  'Marco',
-  'Resto',
-  'Comer',
-];
-//añade palabras a la lista
+ function mandarAjax() {
+   $.ajax({
+   type: "POST",
+   url: "/traerLista",
+   data: JSON.stringify(null),
+   contentType: "application/json",
+   dataType: 'json',
+   success: function(result) {
+     lista = result; 
+     console.log(lista)
+     palabraRandom = lista
+     loQueEraGlobal()
+     
+   } 
+ }); 
+}
+
 const addedArray = [];
 
 const addTo = (word) => {
@@ -34,8 +27,8 @@ const addTo = (word) => {
   console.log(capitalAddedArray);
 };
 //pasa a mayuscula la lista cone el metodo .map() 
-const upperCaseBirds = birds.map((item) => item.toUpperCase());
-console.log(upperCaseBirds);
+//const upperCaseBirds = birds.map((item) => item.toUpperCase());
+//console.log(upperCaseBirds);
 
 
 const randomArr = (arr) => {
@@ -45,10 +38,13 @@ const randomArr = (arr) => {
   const item = arr[randomIndex];
   return item;
 };
+let palabraRandom = 0
+async function loQueEraGlobal() {
+  
 
-
-const word = randomArr(upperCaseBirds);
+const word = palabraRandom.lista[0][1].toUpperCase();
 console.log(word);
+
 
 //selecciona el tile container div
 const tileDisplay = document.querySelector('.tile-container');
@@ -60,6 +56,7 @@ const messageDisplay = document.querySelector('.msg-container');
 let currentRow = 0;
 let currentTile = 0;
 let isGameOver = false;
+let adivina = false;
 
 const keys = [
   'Q',
@@ -176,7 +173,7 @@ const deleteLetter = (letter) => {
     tile.setAttribute('data', '');
   }
 };
-
+  
 const checkRow = () => {
   const guess = guessRows[currentRow].join('');
 
@@ -184,13 +181,26 @@ const checkRow = () => {
     console.log(`Guess is ${guess}, worlde is ${word}`);
     flipTile();
     if (word === guess) {
-      isGameOver = true;
-      return;
-    } else {
+      adivina = true;
+      const frase = palabraRandom.lista[0][2];
+    console.log(frase);
+    document.getElementById('frase').innerHTML = frase;
+      document.getElementById('ventana_titulo').innerHTML = '¡Felicidades!, adivinaste la palabra...';
+      
+     document.getElementById("ventana").style.display = "block";
+      
+      //window.location.replace("static/templates/adivina.html");
+      //document.getElementById("adivino").submit()
+      
+    } else  {
+      
+  
       //si estas en tu ultimo intetno y fallas, perdes
       if (currentRow >= 5) {
         isGameOver = true;
-        return;
+       document.getElementById('ventana_titulo').innerHTML = '¡Mala Suerte!, no adivinaste la palabra...';
+        document.getElementById('ventana_subtitulo').innerHTML = 'Toca inicio y volvelo a intentar';
+     document.getElementById("ventana").style.display = "block";
       }
       //si la row actual es menor que 5 incrementa la siguiente linea
       if (currentRow < 5) {
@@ -245,3 +255,37 @@ const flipTile = () => {
     }, 500 * index);
   });
 };
+
+document.getElementById('timer').innerHTML = 05 + ":" + 01;
+startTimer();
+
+
+function startTimer() {
+  var presentTime = document.getElementById('timer').innerHTML;
+  var timeArray = presentTime.split(/[:]+/);
+  var m = timeArray[0];
+  var s = checkSecond((timeArray[1] - 1));
+  if(s==59){m=m-1}
+  if(m<0){
+    return
+  }
+  if(s==0&m==0){
+    isGameOver = true;
+    document.getElementById('ventana_titulo').innerHTML = '¡Mala Suerte!, no adivinaste la palabra...';
+    document.getElementById('ventana_subtitulo').innerHTML = 'Toca inicio y volvelo a intentar';
+    document.getElementById("ventana").style.display = "block";
+  }
+  
+  document.getElementById('timer').innerHTML =
+    m + ":" + s;
+  //console.log(m)
+  setTimeout(startTimer, 1000);
+}
+
+function checkSecond(sec) {
+  if (sec < 10 && sec >= 0) {sec = "0" + sec}; // add zero in front of numbers < 10
+  if (sec < 0) {sec = "59"};
+  return sec;
+}
+  
+}

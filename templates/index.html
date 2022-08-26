@@ -5,29 +5,28 @@
   <title>Maquetacion HTML Proyecto</title>
   <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Paytone+One&display=swap'><link rel="stylesheet" href="static/css/style.css">
 </head>
+  
 <body>
-
-
-
+<form action="{{ url_for('proyecto') }}" id="proyecto">
+  <button id="quienessomos"> ?</button>
+</form>
+  
 <div class="area" >
   <div id="botones">
   <h1>WORDLE</h1>
   <h3>ODS Version</h3> 
-  <h4>Ingresa tu nombre:</h4>
-  <label for="nombre" id="campos"></label>
-  <input type="text" class="campos" id="campos" placeholder="Nombre">
-  <button onclick="location.href= 'https://G06-TPI-1cuatr.agustina-belen2.repl.co/cuadro' " id="jugar">JUGAR</button>
-  <button onclick="location.href= 'https://G06-TPI-1cuatr.agustina-belen2.repl.co/reglas' " id="reglas">REGLAS</button> 
-</div>
+  <form action="{{ url_for('cuadro') }}" method="post">
+    <h4>Ingresa tu nombre:</h4>   
+    <input type="text" class="campos" name="nombre" id="campos" placeholder="Nombre"         required>
+    <button id="jugar" type="submit"  onclick="mandarAjax()">JUGAR</button>
+  </form>
+  
+ <form action="{{ url_for('reglas') }}"> 
+    <button type="submit" id="reglas">REGLAS</button>
+ </form>
 
 
-<div id="intentos">
-  <h4>Cantidad de Intentos: 6</h4>
-</div>
 
-<div id="tiempo">
-  <h4>Tiempo: 00:05:00 minutos</h4>
-</div>
   <ul class="circles">
           <li></li>
           <li></li>
@@ -39,8 +38,17 @@
           <li></li>
           <li></li>
           <li></li>
-  </ul>
+  </ul></div>
+  <div id="intentos">
+    <h4>Cantidad de Intentos: 6</h4>
+  </div>
+
+
+<div id="tiempo">
+  <h4>Tiempo: 00:05:00 minutos</h4>
+</div>
 </div >
+
 
   <script  src="static/js/script.js"></script>
 </body>

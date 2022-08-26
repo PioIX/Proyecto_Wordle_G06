@@ -30,9 +30,7 @@
     background: -webkit-linear-gradient(to left, #4fd335, #169b21);  
     width: 100%;
     height:100vh;
-    z-index: -4;
-    position: absolute;
- 
+    z-index: 0;
 }
 
 .circles{
@@ -131,6 +129,7 @@
 }
 
 @keyframes animate {
+
     0%{
         transform: translateY(0) rotate(0deg);
         opacity: 1;
@@ -142,58 +141,41 @@
         opacity: 0;
         border-radius: 50%;
     }
+
 }
 
 /* FONDO*/
 
-body {
-    font-family: 'Paytone One', sans-serif;
-}
-
-#botones {
+.Titulo h2 {
     display: flex;
+    font-size: 50px;
+    color: #FFF;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /*position: absolute;*/
-    top: 10%;
-    /*left: 50%;
-    transform: translate(-50%, -50%);*/
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     z-index: 1;
-    margin-top: 90px;
 }
 
-form {
-  width: 30%;
-  align-items: center;
-  text-align: center;
-  z-index: 2;
-}
-
-#botones h1 {
-    font-size: 100px;
-    color: #fff;
-}
-
-#botones h3 {
-    font-size: 30px;
-    color: #77FF74;
-}
-
-#botones h4 {
-    font-family: 'Open Sans', sans-serif;
-    color: #fff;
-    margin-top: 15%;
-    font-size: 25px;
-}
-
-#botones button {
+.Titulo h3 {
     display: flex;
-    align-content: space-between;
-    margin: 10px;
+    font-size: 40px;
+    color: #77FF74;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 12%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
 }
 
-#botones #jugar{
+.Boton #inicio {
+    position: absolute;
     background-color: #4EEF4A;
     border-color: #34D130;
     color: #fff;
@@ -201,126 +183,17 @@ form {
     height: 50px;
     font-size: 25px;
     justify-content: center;
-    margin-right: auto;
-    margin-left: auto;
+    margin-top: 15px;
+    margin-left: 20px;
     z-index: 1;
 }
 
-#botones #reglas{
-    background-color: rgba(255, 255, 255, 0);
-    border-color: #42EF3E;
-    color: #fff;
-    width: 95px;
-    height: 35px;
-    font-size: 18px;
-    justify-content: center;
+.Descripcion{
     z-index: 1;
-    margin: auto;
-}
-
-#campos{
-    width: 90%;
-    height: 50px;
-    margin-top: 20px;
-  margin-bottom: 25px;
-    border-radius: 10px;
-    border-color: #A6A6A6;
-    padding: 20px;
-    font-family: 'Open Sans', sans-serif;
-    display: flex;
-    flex-direction: column;
-    margin-right: auto;
-    margin-left: auto;
-    /*position: absolute;
-    top: 75%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;*/
-}
-
-#intentos {
-   position: fixed;
-   bottom:15px;
-   left: 30px;
-}
-
-#intentos h4{
-    display: flex;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 160%;
-    color: #fff;
-    /*position:absolute;*/
- 
-    /*right:10px;*/
-}
-
-#tiempo {
-  position: fixed;
-   bottom:15px;
-  right: 30px;
-}
-
-#tiempo h4{
-
-  /*display: flex;*/
-    font-family: 'Open Sans', sans-serif;
-    font-size: 160%;
-    color: #fff;
-}
-
-#load-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  /*position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);*/
-}
-
-#load-container h1 {
-  font-size: 70px;
-}
-
-#load-container button {
-  border: 0;
-  outline: 0;
-  font-size: 30px;
-  padding: 5px 50px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-#load-container button:hover {
-  transform: scale(1.2);
-}
-
-#quienessomos {
-    display: flex;
-    height: 80px;
-    width: 80px;
-    margin: 30px;
-    border-radius: 190px;
-    border: 3px solid #34D130;
-    background: #4EEF4A;
-    text-align: center;
-    text-decoration: none;
-    color: #4EEF4A;
-    line-height: 80px;
-    font-size: 30px;
-    font-weight: bold;
-    font-style: normal;
-    color: #fff;
-    align-items: center;
-    justify-content: center;
-}
-
-#proyecto {
-    align-items: right;
-    justify-content: right;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 150px;
     position: absolute;
-    float: left;
-    z-index: 1;
+    color: #fff;
+    font-size: 20px;    
 }
