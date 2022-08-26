@@ -43,7 +43,6 @@ async function loQueEraGlobal() {
   
 
 const word = palabraRandom.lista[0][1].toUpperCase();
-console.log(word);
 
 
 //selecciona el tile container div

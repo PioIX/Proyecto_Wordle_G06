@@ -319,6 +319,20 @@ body {
   z-index: 1;
 }
 
+
+#refrescar {
+  background-color: #4EEF4A;
+  border-color: #34D130;
+  color: #fff;
+  width: 200px;
+  height: 40px;
+  font-size: 20px;
+  justify-content: center;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 #ventana_titulo {
   color: #2EAD2B;
   font-size: 40px
@@ -329,10 +343,23 @@ body {
   font-size: 20px;
 }
 
+
+/*#ventana_pregunta {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+}
+*/
+
+#ventana_subtitulo1 {
+  color: #2EAD2B;
+  font-size: 30px
+}
+
 #ventana_subtitulo {
   font-family: 'Open Sans', sans-serif;
   font-size: 20px;
 }
+
 
 .Contador {
   width: 300px;
@@ -349,4 +376,7 @@ body {
 
 #timer {
   color: #fff;
+
 }
+
+
