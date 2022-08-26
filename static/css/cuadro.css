@@ -160,7 +160,6 @@ body {
   width: 800px;
   margin-top: 20px;
   z-index: 1;
-  
 }
 
 .title-container h1 {
@@ -320,6 +319,7 @@ body {
   z-index: 1;
 }
 
+
 #refrescar {
   background-color: #4EEF4A;
   border-color: #34D130;
@@ -343,15 +343,23 @@ body {
   font-size: 20px;
 }
 
+
 /*#ventana_pregunta {
   font-family: 'Open Sans', sans-serif;
   font-size: 20px;
 }
 */
+
 #ventana_subtitulo1 {
   color: #2EAD2B;
   font-size: 30px
 }
+
+#ventana_subtitulo {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+}
+
 
 .Contador {
   width: 300px;
@@ -368,4 +376,7 @@ body {
 
 #timer {
   color: #fff;
+
 }
+
+
