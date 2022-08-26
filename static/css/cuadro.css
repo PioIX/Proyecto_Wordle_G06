@@ -319,3 +319,53 @@ body {
   margin-left: 5%;
   z-index: 1;
 }
+
+#refrescar {
+  background-color: #4EEF4A;
+  border-color: #34D130;
+  color: #fff;
+  width: 200px;
+  height: 40px;
+  font-size: 20px;
+  justify-content: center;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#ventana_titulo {
+  color: #2EAD2B;
+  font-size: 40px
+}
+
+#frase {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+}
+
+/*#ventana_pregunta {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+}
+*/
+#ventana_subtitulo1 {
+  color: #2EAD2B;
+  font-size: 30px
+}
+
+.Contador {
+  width: 300px;
+  height: 40px;
+  background-color: #4EEF4A;
+  border-color: #34D130;
+  color: #ffffff;
+  font-size:25px;
+  text-align:center;
+  float: left;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+#timer {
+  color: #fff;
+}
